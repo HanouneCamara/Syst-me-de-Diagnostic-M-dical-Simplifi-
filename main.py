@@ -1,5 +1,5 @@
 # Message de bienvenue
-print("                        👋 Bienvenue dans le Super-Diagnostiqueur 0107002 🤖        \n")
+print("\n                        👋 Bienvenue dans le Super-Diagnostiqueur 0107002 🤖        \n")
 print("Je vous aide à détecter rapidement certaines maladies simples à partir de vos symptômes. Veuillez répondre aux questions qui vont suivre.")
 print("⚠️ Ce système ne remplace pas un avis médical professionnel.")
 
@@ -39,5 +39,3 @@ if raideur == "oui":
 covid = input("Votre test COVID est-il positif ?\n").strip().lower()
 if covid == "oui":
     symptomes_utilisateur.append("positif")
-
-

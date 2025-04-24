@@ -42,14 +42,14 @@ if covid == "oui":
 
 
 # Vérification
-maladie_trouvee = None
+maladies_trouvees = []
 for maladie, symptomes in maladies.items():
     if all(symptome in symptomes_utilisateur for symptome in symptomes):
-        maladie_trouvee = maladie
-        break
-
-# Afficher le résultat
-if maladie_trouvee:
-    print("Vous avez la", maladie_trouvee)
+        maladies_trouvees.append(maladie)
+# Afficher les maladies
+if maladies_trouvees:
+    print("\n Vous présentez les symptômes des maladies suivantes :")
+    for maladie in maladies_trouvees:
+        print("-",maladie)
 else:
-    print("Aucun maladie trouvée.")
+    print("\n Aucun diagnostic possible avec les symptômes fournis.")

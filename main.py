@@ -1,7 +1,43 @@
 # Message de bienvenue
-print("👋 Bienvenue dans le Super-Diagnostiqueur 0107002 🤖")
+print("                        👋 Bienvenue dans le Super-Diagnostiqueur 0107002 🤖        \n")
 print("Je vous aide à détecter rapidement certaines maladies simples à partir de vos symptômes. Veuillez répondre aux questions qui vont suivre.")
 print("⚠️ Ce système ne remplace pas un avis médical professionnel.")
 
+#les maladies
+maladies = {
+    "Grippe": ["fièvre", "toux"],
+    "Méningite": ["fièvre", "maux de tête", "raideur"],
+    "COVID": ["positif"]
+}
+#symptômes utilisateur
+symptomes_utilisateur = []
+
 #Les questions
 print("Veuillez répondre aux questions suivantes par 'oui' ou 'non' ")
+
+# Vérifier si l'utilisateur a de la fièvre
+fievre = input("Avez-vous de la fievre ?\n").strip().lower()
+if fievre == "oui":
+    symptomes_utilisateur.append("fièvre")
+
+# Vérifier si l'utilisateur a de la toux
+toux = input("Avez-vous de la toux ?\n").strip().lower()
+if toux == "oui":
+    symptomes_utilisateur.append("toux")
+
+# Vérifier si l'utilisateur a des maux de tête
+maux_tete = input("Avez-vous des maux de tête ?\n").strip().lower()
+if maux_tete == "oui":
+    symptomes_utilisateur.append("maux de tête")
+
+# Vérifier si l'utilisateur a des raideurs
+raideur = input("Avez-vous des raideurs ?\n").strip().lower()
+if raideur == "oui":
+    symptomes_utilisateur.append("raideur")
+
+# Vérifier si l'utilisateur est positif au covid
+covid = input("Votre test COVID est-il positif ?\n").strip().lower()
+if covid == "oui":
+    symptomes_utilisateur.append("positif")
+
+

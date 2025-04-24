@@ -1,7 +1,7 @@
 # Message de bienvenue
 print("\n                        👋 Bienvenue dans le Super-Diagnostiqueur 0107002 🤖        \n")
 print("Je vous aide à détecter rapidement certaines maladies simples à partir de vos symptômes. Veuillez répondre aux questions qui vont suivre.")
-print("⚠️ Ce système ne remplace pas un avis médical professionnel.")
+print("⚠️ Ce système ne remplace pas un avis médical professionnel.\n")
 
 #les maladies
 maladies = {
@@ -39,3 +39,17 @@ if raideur == "oui":
 covid = input("Votre test COVID est-il positif ?\n").strip().lower()
 if covid == "oui":
     symptomes_utilisateur.append("positif")
+
+
+# Vérification
+maladie_trouvee = None
+for maladie, symptomes in maladies.items():
+    if all(symptome in symptomes_utilisateur for symptome in symptomes):
+        maladie_trouvee = maladie
+        break
+
+# Afficher le résultat
+if maladie_trouvee:
+    print("Vous avez la", maladie_trouvee)
+else:
+    print("Aucun maladie trouvée.")

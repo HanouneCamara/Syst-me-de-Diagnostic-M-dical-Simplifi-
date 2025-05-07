@@ -12,7 +12,7 @@ titre_label = tk.Label(
     font=("Helvetica", 16, "bold"),
     fg="blue"
 )
-titre_label.pack(pady=10)  # padding vertical
+titre_label.pack(pady=12)  # padding vertical
 
 # Lancement de l’interface
 fenetre.mainloop()
